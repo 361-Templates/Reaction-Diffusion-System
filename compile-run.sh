@@ -1,0 +1,2 @@
+emcc -std=c++20 -fexperimental-library -IEmpirical/include/ -Os --js-library Empirical/include/emp/web/library_emp.js -s EXPORTED_FUNCTIONS="['_malloc', '_free','_main', '_empCppCallback', '_empDoCppCallback']" -s "EXPORTED_RUNTIME_METHODS=['ccall', 'cwrap', 'getValue', 'setValue', 'UTF8ToString', 'stringToUTF8', 'addFunction', 'removeFunction']" -s ALLOW_TABLE_GROWTH=1 -s NO_EXIT_RUNTIME=1 RDLSysAnimate.cpp -o RDLSysAnimate.js
+python3 -m http.server
